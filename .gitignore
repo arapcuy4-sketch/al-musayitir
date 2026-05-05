@@ -1,0 +1,20 @@
+# Unity folders
+/Library/
+/Temp/
+/Obj/
+/Build/
+/Builds/
+/Logs/
+/UserSettings/
+
+# Unity files
+*.csproj
+*.sln
+*.suo
+*.user
+*.pidb
+*.booproj
+
+# OS files
+.DS_Store
+Thumbs.db
