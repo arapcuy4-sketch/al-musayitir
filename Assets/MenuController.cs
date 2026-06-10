@@ -23,4 +23,14 @@ public class MenuController : MonoBehaviour
     // Menggunakan tanda kutip dua untuk nama scene "Level 1"
     SceneManager.LoadScene("Level 1"); 
 }
+
+public void PindahKeLevel2()
+{
+ SceneManager.LoadScene("Level 2");
+}
+
+public void PindahKeLevel3()
+    {
+        SceneManager.LoadScene("Level 3");
+    }
 }

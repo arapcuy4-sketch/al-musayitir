@@ -14608,7 +14608,7 @@ MonoBehaviour:
   target: {fileID: 1295385774}
   distance: 2.5
   height: 1.5
-  sensitivity: 3
+  sensitivity: 20
   smoothSpeed: 10
 --- !u!4 &964727590 stripped
 Transform:
@@ -19294,8 +19294,16 @@ PrefabInstance:
       value: Shamy
       objectReference: {fileID: 0}
     - target: {fileID: 7666435366083007486, guid: 19c43faf58bf2284284d82a4759e7c4a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666435366083007486, guid: 19c43faf58bf2284284d82a4759e7c4a, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7666435366083007486, guid: 19c43faf58bf2284284d82a4759e7c4a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7666435366083007486, guid: 19c43faf58bf2284284d82a4759e7c4a, type: 3}
       propertyPath: m_LocalPosition.x
