@@ -18,19 +18,28 @@ public class MenuController : MonoBehaviour
     }
 
     // FUNGSI BARU: Untuk pindah ke scene Level 1
-   public void PindahKeLevel1()
-{
-    // Menggunakan tanda kutip dua untuk nama scene "Level 1"
-    SceneManager.LoadScene("Level 1"); 
-}
+    public void PindahKeLevel1()
+    {
+        // Menggunakan tanda kutip dua untuk nama scene "Level 1"
+        SceneManager.LoadScene("Level 1"); 
+    }
 
-public void PindahKeLevel2()
-{
- SceneManager.LoadScene("Level 2");
-}
+    public void PindahKeLevel2()
+    {
+        SceneManager.LoadScene("Level 2");
+    }
 
-public void PindahKeLevel3()
+    public void PindahKeLevel3()
     {
         SceneManager.LoadScene("Level 3");
+    }
+
+    // ========================================================
+    // FUNGSI BARU: Untuk kembali ke scene Start Screen
+    // ========================================================
+    public void KembaliKeStartScreen()
+    {
+        // Memanggil nama scene "Start Screen" (sesuaikan huruf besar/kecilnya)
+        SceneManager.LoadScene("Start Screen");
     }
 }

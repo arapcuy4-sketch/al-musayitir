@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Progress project game 1.slnx"
+    "dotnet.defaultSolution": "al-musayitir.slnx"
 }

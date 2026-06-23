@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eeb43c21f13f994793e1a9c513312bf, type: 3}
+  m_Name: Popup_Level1
+  m_EditorClassIdentifier: Assembly-CSharp::PopupData
+  judulPopup: 'MISI BERHASIL: Class & Object Terdeteksi'
+  isiPenjelasan: 'Kamu baru saja berhasil mengumpulkan 3 Object dari Class TabungReaksi.
+
+
+    Class
+    adalah cetakan atau blueprint kosong yang mendefinisikan struktur (seperti bentuk
+    tabung, bahan kaca, dan kapasitas mili).
+
+
+    Object (Instance) adalah wujud
+    nyata yang dibuat dari cetakan Class tersebut.
+
+
+    Meskipun ketiga tabung reaksi
+    yang kamu klik memiliki bentuk dasar yang sama dari cetakannya, masing-masing
+    tabung di game ini adalah objek mandiri yang berdiri sendiri. Kamu bisa mengisi
+    Tabung 1 dengan zat asam, dan Tabung 2 dengan air biasa tanpa saling memengaruhi
+    satu sama lain!'
+  teksTombol: Lanjutkan Penelitian
+  iconLevel: {fileID: 0}
