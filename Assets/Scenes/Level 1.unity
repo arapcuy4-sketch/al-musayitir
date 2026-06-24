@@ -1429,7 +1429,7 @@ MonoBehaviour:
   jumpWithRigidbodyForce: 0
   jumpAndRotate: 1
   jumpTimer: 0.3
-  jumpHeight: 4
+  jumpHeight: 3
   airSpeed: 5
   airSmooth: 6
   extraGravity: -10
@@ -8834,7 +8834,7 @@ Light:
   m_GameObject: {fileID: 501175269}
   m_Enabled: 1
   serializedVersion: 12
-  m_Type: 2
+  m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.24
   m_Range: 2.4943397
@@ -17177,7 +17177,7 @@ Light:
   m_GameObject: {fileID: 1034227089}
   m_Enabled: 1
   serializedVersion: 12
-  m_Type: 0
+  m_Type: 1
   m_Color: {r: 0.6981132, g: 0.67806894, b: 0.5828587, a: 1}
   m_Intensity: 2
   m_Range: 8.575558
