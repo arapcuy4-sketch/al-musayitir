@@ -13,6 +13,22 @@ MonoBehaviour:
   m_Name: Popup_Level3
   m_EditorClassIdentifier: Assembly-CSharp::PopupData
   judulPopup: "\u26A1 PROTOKOL SELESAI: Interface Diaktifkan!"
-  isiPenjelasan: 'isiPenjelasan: (paste teks Interface)'
+  isiPenjelasan: 'Interface adalah sebuah ''kontrak'' di dalam pemrograman OOP yang
+    memaksa Class apa pun untuk menyediakan fungsi yang sama, tanpa peduli bagaimana
+    cara kerja atau bentuk di dalamnya.
+
+    
+
+    Kamu baru saja merapikan Kardus,
+    Palet Kayu, dan Karung Tepung. Meskipun karakteristik fisik mereka bertolak belakang
+    (Kardus itu kaku, Palet itu kayu berat, Karung itu kain lentur), mereka semua
+    bisa diangkut oleh Troli karena tunduk pada satu kontrak Interface yang sama,
+    yaitu ''IKargo''.
+
+    
+
+    Dengan Interface, sistem Troli hanya perlu tahu
+    fungsi ''Angkut()''. Urusan bagaimana cara Kardus ditumpuk atau Karung Tepung
+    ditaruh agar tidak bocor, itu diserahkan ke logika Class masing-masing!'
   teksTombol: Selesaikan Simulasi Game
   iconLevel: {fileID: 0}

@@ -1,63 +1,105 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; // Diperlukan untuk sistem pindah level
 
 public class EducationPopupManager : MonoBehaviour
 {
     public static EducationPopupManager Instance { get; private set; }
 
-    [Header("Referensi UI Panel Akhir (Popup Edukasi)")]
-    public GameObject panelPopupEdukasi; 
-    public TextMeshProUGUI textJudul;
-    public TextMeshProUGUI textIsi;
-    public TextMeshProUGUI textTombol;
-    
-    [Header("PERINGATAN: Masukkan 'TombolLanjutLevel' dari PanelPopup, BUKAN Tombol Quiz!")]
-    public Button tombolSelesaiDanPindahLevel; // Nama variabel diganti total agar reset di Inspector
-    public Image imageIcon;
+    [Header("UI Elements")]
+    public GameObject popupPanel;
+    public TextMeshProUGUI titleText;
+    public TextMeshProUGUI descriptionText;
+    public Image popupImage; 
+
+    [Header("Level Transition Slot")]
+    public Button tombolLanjut;          // Slot untuk seret objek Tombol Lanjut dari Hierarchy
+    public string namaSceneSelanjutnya; // Slot untuk ngetik nama scene (misal: Level 2)
+
+    private bool isPopupActive = false;
 
     private void Awake()
     {
-        Instance = this;
-
-        if (panelPopupEdukasi != null)
-            panelPopupEdukasi.SetActive(false);
-
-        // Memasang fungsi klik secara otomatis ke tombol yang benar
-        if (tombolSelesaiDanPindahLevel != null)
+        if (Instance == null)
         {
-            tombolSelesaiDanPindahLevel.onClick.RemoveAllListeners(); // Bersihkan sisa referensi lama
-            tombolSelesaiDanPindahLevel.onClick.AddListener(OnTombolLanjutDiklik);
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        if (popupPanel != null)
+        {
+            popupPanel.SetActive(false);
+        }
+    }
+
+    private void Start()
+    {
+        // Otomatis memasang fungsi klik ke tombol yang kamu seret di Inspector
+        if (tombolLanjut != null)
+        {
+            tombolLanjut.onClick.RemoveAllListeners();
+            tombolLanjut.onClick.AddListener(LanjutKeLevelBerikutnya);
         }
     }
 
     public void TampilkanPopup(PopupData data)
     {
-        Time.timeScale = 0f;
+        if (data == null)
+        {
+            Debug.LogError("[Popup Manager] Data Popup kosong / null!");
+            return;
+        }
 
-        if (textJudul != null) textJudul.text = data.judulPopup;
-        if (textIsi != null) textIsi.text = data.isiPenjelasan;
-        if (textTombol != null) textTombol.text = data.teksTombol;
-        if (imageIcon != null) imageIcon.sprite = data.iconLevel;
+        if (isPopupActive) return;
+        isPopupActive = true;
 
-        if (panelPopupEdukasi != null)
-            panelPopupEdukasi.SetActive(true);
+        if (titleText != null) 
+            titleText.text = data.judulPopup; 
 
-        Debug.Log("[System] Popup Edukasi Muncul! Game di-freeze.");
+        if (descriptionText != null) 
+            descriptionText.text = data.isiPenjelasan; 
+
+        if (popupImage != null && data.iconLevel != null) 
+            popupImage.sprite = data.iconLevel; 
+
+        if (popupPanel != null)
+        {
+            popupPanel.SetActive(true);
+        }
+
+        Time.timeScale = 0f; // Menghentikan waktu game saat popup edukasi muncul
     }
 
-    private void OnTombolLanjutDiklik()
+    public void TutupPopup()
     {
-        // Debug ini untuk membuktikan kalau tombol ini yang diklik
-        Debug.Log("[System] Tombol 'Lanjutkan Level' sukses diklik. Memuat Scene Berikutnya...");
+        if (popupPanel != null)
+        {
+            popupPanel.SetActive(false);
+        }
+        
+        isPopupActive = false;
+        Time.timeScale = 1f; // Kembalikan waktu ke normal jika panel ditutup biasa
+    }
 
-        if (panelPopupEdukasi != null)
-            panelPopupEdukasi.SetActive(false);
+    // Fungsi otomatis yang dijalankan saat tombolLanjut yang kamu seret itu diklik
+    public void LanjutKeLevelBerikutnya()
+    {
+        Time.timeScale = 1f; // Normalisasi waktu game agar scene selanjutnya tidak freeze
 
-        Time.timeScale = 1f;
-
-        // Pindah ke level berikutnya
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (!string.IsNullOrEmpty(namaSceneSelanjutnya))
+        {
+            Debug.Log($"[Popup Manager] Memuat scene: {namaSceneSelanjutnya}");
+            SceneManager.LoadScene(namaSceneSelanjutnya);
+        }
+        else
+        {
+            Debug.LogError("[Popup Manager] Nama scene selanjutnya belum diisi di Inspector!");
+        }
     }
 }
