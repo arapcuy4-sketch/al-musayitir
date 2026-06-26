@@ -2537,8 +2537,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2576,7 +2576,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -2.92688, y: 0, z: -3.2995605, w: -1.8562927}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2606,8 +2606,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -36.051}
-  m_SizeDelta: {x: 700, y: 202.92}
+  m_AnchoredPosition: {x: 21.7734, y: -100.02446}
+  m_SizeDelta: {x: 1221.8928, y: 330.8589}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &494250379
 GameObject:
@@ -2853,12 +2853,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ed31b57bf18c6446bf79bc5b201b29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EducationPopupManager
-  popupPanel: {fileID: 0}
-  titleText: {fileID: 0}
-  descriptionText: {fileID: 0}
+  popupPanel: {fileID: 551385336}
+  titleText: {fileID: 104360151}
+  descriptionText: {fileID: 780786165}
   popupImage: {fileID: 0}
-  tombolLanjut: {fileID: 0}
-  namaSceneSelanjutnya: 
+  tombolLanjut: {fileID: 9958503}
+  namaSceneSelanjutnya: Level 3
 --- !u!114 &551385339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3935,8 +3935,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 8
+  m_fontSizeBase: 8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4724,7 +4724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -16}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &978088565
@@ -5275,10 +5275,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9958502}
   - {fileID: 1612756610}
   - {fileID: 104360150}
   - {fileID: 780786164}
+  - {fileID: 9958502}
   m_Father: {fileID: 551385337}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6991,7 +6991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106, y: -187}
+  m_AnchoredPosition: {x: 106, y: -340}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1471061543
@@ -7715,8 +7715,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 800, y: 500}
+  m_AnchoredPosition: {x: -70.28253, y: -4}
+  m_SizeDelta: {x: 1468.7164, y: 790}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608647866
 MonoBehaviour:
@@ -9853,8 +9853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -30.7469}
-  m_SizeDelta: {x: 700, y: 213.5283}
+  m_AnchoredPosition: {x: 21.774, y: -101.01}
+  m_SizeDelta: {x: 1221.9, y: 328.89}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2082398890
 MonoBehaviour:

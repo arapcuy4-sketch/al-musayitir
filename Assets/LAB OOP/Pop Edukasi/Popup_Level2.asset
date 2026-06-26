@@ -16,19 +16,17 @@ MonoBehaviour:
   isiPenjelasan: 'Inheritance adalah konsep di mana sebuah Class (Induk) bisa mewariskan
     sifat dan fungsinya ke Class lain (Anak).
 
-    
 
-    Di Level 2 ini, kamu baru
-    saja mengumpulkan Mainan Kendaraan Mini (Vehicle) dan Mainan Hewan Plastik (Animal).
+    Di Level 2 ini, kamu baru saja
+    mengumpulkan Mainan Kendaraan Mini (Vehicle) dan Mainan Hewan Plastik (Animal).
     Dalam kode program, keduanya adalah turunan (Child Class) dari satu induk yang
     sama, yaitu Class ''Mainan''.
 
-    
 
-    Sebagai sesama mainan, mereka sama-sama
-    punya properti ''Nama'' dan ''Ukuran''. Namun, Class Vehicle mengembangkan fungsi
-    unik seperti ''Berjalan()'', sedangkan Class Animal mengembangkan fungsi unik
-    seperti ''Bersuara()''. Kamu tidak perlu membuat kode sifat dasar mainan dari
-    nol lagi untuk setiap jenis mainan!'
+    Sebagai sesama mainan, mereka sama-sama punya
+    properti ''Nama'' dan ''Ukuran''. Namun, Class Vehicle mengembangkan fungsi unik
+    seperti ''Berjalan()'', sedangkan Class Animal mengembangkan fungsi unik seperti
+    ''Bersuara()''. Kamu tidak perlu membuat kode sifat dasar mainan dari nol lagi
+    untuk setiap jenis mainan!'
   teksTombol: Masuk ke Ruang Inti
   iconLevel: {fileID: 0}
