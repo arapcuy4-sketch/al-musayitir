@@ -1,26 +1,44 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Tambahkan ini agar bisa pindah scene
+using UnityEngine.SceneManagement; 
 
 public class MenuController : MonoBehaviour
 {
     public GameObject panelLevelSelection;
+    
+    // 1. TAMBAHKAN VARIABEL BARU UNTUK PANEL SETTINGS
+    public GameObject panelSettings; 
 
-    // Fungsi untuk membuka panel (sudah ada)
+    // ========================================================
+    // FUNGSI UNTUK PANEL LEVEL SELECTION
+    // ========================================================
     public void BukaLevelSelection()
     {
         panelLevelSelection.SetActive(true);
     }
 
-    // FUNGSI BARU: Untuk menutup panel
     public void TutupLevelSelection()
     {
         panelLevelSelection.SetActive(false);
     }
 
-    // FUNGSI BARU: Untuk pindah ke scene Level 1
+    // ========================================================
+    // FUNGSI BARU UNTUK PANEL SETTINGS
+    // ========================================================
+    public void BukaSettings()
+    {
+        panelSettings.SetActive(true);
+    }
+
+    public void TutupSettings()
+    {
+        panelSettings.SetActive(false);
+    }
+
+    // ========================================================
+    // FUNGSI PINDAH SCENE
+    // ========================================================
     public void PindahKeLevel1()
     {
-        // Menggunakan tanda kutip dua untuk nama scene "Level 1"
         SceneManager.LoadScene("Level 1"); 
     }
 
@@ -34,12 +52,8 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("Level 3");
     }
 
-    // ========================================================
-    // FUNGSI BARU: Untuk kembali ke scene Start Screen
-    // ========================================================
     public void KembaliKeStartScreen()
     {
-        // Memanggil nama scene "Start Screen" (sesuaikan huruf besar/kecilnya)
         SceneManager.LoadScene("Start Screen");
     }
 }
