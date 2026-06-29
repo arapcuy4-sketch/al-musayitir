@@ -126,12 +126,23 @@ public class vThirdPersonCamera : MonoBehaviour
     /// <param name="y"></param>
     public void RotateCamera(float x, float y)
     {
-        // free rotation 
-        mouseX += x * xMouseSensitivity;
-        mouseY -= y * yMouseSensitivity;
+        // --- MODIFIKASI: Kamera hanya berputar jika Klik Kiri (0) ditahan ---
+        if (Input.GetMouseButton(1))
+        {
+            // free rotation 
+            mouseX += x * xMouseSensitivity;
+            mouseY -= y * yMouseSensitivity;
 
-        movementSpeed.x = x;
-        movementSpeed.y = -y;
+            movementSpeed.x = x;
+            movementSpeed.y = -y;
+        }
+        else
+        {
+            // Mencegah rotasi berlanjut saat klik dilepas
+            movementSpeed = Vector2.zero;
+        }
+        // --------------------------------------------------------------------
+
         if (!lockCamera)
         {
             mouseY = vExtensions.ClampAngle(mouseY, yMinLimit, yMaxLimit);
